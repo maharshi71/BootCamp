@@ -1,0 +1,46 @@
+<head>
+    <title>Weather app</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+<!--    <script src="{{ url_for('static',filename='js/script.js') }}"> </script>-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Welcome to <strong>Weather.com</strong></h1>
+        </div>
+        <p>
+            You can get all the weather data for {{ city }}
+        </p>
+        <button type="button" class="btn btn-success" onclick="onButtonPress()">Click Me!</button>
+        {% for i in range(0,len)%}
+        <a href="/weather/{{weather[i]}}">{{weather[i]}}</a>
+    </div>
+        {%endfor%}
+    <p class="myNewClass" id="importantID">This is my CSS Class</p>
+</body>
+<script>
+let a = 2;
+let b = "Hello";
+
+if(a === 2){
+    console.log("Hello There!");
+    alert("Hello this is an alert!!!");
+}
+
+function onButtonPress(){
+    $("#importantID").css("border","3px solid red")
+    alert("You Pressed me")
+}
+</script>

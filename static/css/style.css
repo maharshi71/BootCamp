@@ -1,0 +1,12 @@
+body {
+    color : red !important;
+    padding: 5px;
+    margin: 5px;
+}
+.myNewClass{
+    font-size: 30px;
+    background-color: yellow !important;
+    color: black;
+    padding: 30px;
+    margin: 60px:
+}
